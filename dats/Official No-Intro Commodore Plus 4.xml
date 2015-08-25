@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Dat by Patrick (nointro@free.fr) aka [-F1-] on IRC, Dat and Images Hosted on http://nointro.free.fr -->
+<!-- Please visit official no-intro website on http://www.gbadat.altervista.org> -->
+<!-- Download OfflineList on http://offlinelist.free.fr> -->
+
+<!-- Datter : Bigmax -->
+<!-- Pictures by :  -->
+<!-- OL Datter : Patrick -->
+
+<dat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="datas.xsd">
+	<configuration>
+		<datName>Official No-Intro Commodore Plus 4</datName>
+		<datVersion>830181705</datVersion>
+		<system>Commodore Plus/4</system>
+		<screenshotsWidth>160</screenshotsWidth>
+		<screenshotsHeight>144</screenshotsHeight>
+		<infos>
+			<title visible="false" inNamingOption="true" default="false"></title>
+			<location visible="true" inNamingOption="true" default="true"></location>
+			<publisher visible="true" inNamingOption="true" default="false"></publisher>
+			<sourceRom visible="true" inNamingOption="true" default="false"></sourceRom>
+			<saveType visible="false" inNamingOption="false" default="false"></saveType>
+			<romSize visible="true" inNamingOption="true" default="true"></romSize>
+			<releaseNumber visible="true" inNamingOption="true" default="false"></releaseNumber>
+			<languageNumber visible="true" inNamingOption="true" default="false"></languageNumber>
+			<comment visible="true" inNamingOption="true" default="true"></comment>
+			<romCRC visible="true" inNamingOption="true" default="true"></romCRC>
+			<im1CRC visible="true" inNamingOption="true" default="false"></im1CRC>
+			<im2CRC visible="true" inNamingOption="true" default="false"></im2CRC>
+			<languages visible="true" inNamingOption="true" default="true"></languages>
+		</infos>
+		<canOpen>
+			<extension>.bin</extension>
+			<extension>.u4</extension>
+			<extension>.u23</extension>
+			<extension>.u24</extension>
+			<extension>.u25</extension>
+			<extension>.u26</extension>
+		</canOpen>
+		<newDat>
+			<datVersionURL>http://nointro.free.fr/version/Official%20No-Intro%20Commodore%20Plus%204_version</datVersionURL>
+			<datURL fileName="Official No-Intro Commodore Plus 4.zip">http://nointro.free.fr/datas/Official%20No-Intro%20Commodore%20Plus%204.zip</datURL>
+			<imURL>http://nointro.free.fr/imgs/Official%20No-Intro%20Commodore%20Plus%204/</imURL>
+		</newDat>
+		<search>
+			<to value="location" default="true" auto="true"></to>
+			<to value="romSize" default="true" auto="false">
+				<find operation="=" value="16384">= 128 KBits</find>
+				<find operation="=" value="32768">= 256 KBits</find>
+			</to>
+			<to value="languages" default="true" auto="true"></to>
+		</search>
+		<romTitle>%n %o %m %e</romTitle>
+	</configuration>
+	<games>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Commodore 1551</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">6D16D024</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Commodore 232</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".bin">74EAAE87</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(Prototype)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Commodore Plus-4</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">74EAAE87</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(R3)</comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Commodore Plus-4</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">74EAAE87</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(R4)</comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Commodore Plus-4</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">74EAAE87</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(R5)</comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Commodore Plus-4</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">74EAAE87</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(R4)</comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Commodore Plus-4</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">74EAAE87</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(R5)</comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Commodore V364</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">84FD4F7A</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(Prototype)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[Program] Calc Plus</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">54AA7B9D</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[Program] Commodore 16 Keyboard Tutorial Cartridge</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">2AEEAD68</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[Program] Financial Advisor</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">5B0E82AE</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[Program] LOGO</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">148541DB</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[Program] Octasoft BASIC v7.0</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".bin">E900A1D5</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Atomic Mission</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">A059FCCB</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Jack Attack</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">6B624FEC</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pirate Adventure</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">A903DC53</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Strange Odyssey</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">994C9B98</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Viduzzles</title>
+			<saveType></saveType>
+			<romSize>16384</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".bin">EAAA44ED</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+	</games>
+</dat>
+

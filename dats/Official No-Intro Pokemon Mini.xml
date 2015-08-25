@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Dat by Patrick (nointro@free.fr) aka [-F1-] on IRC, Dat and Images Hosted on http://nointro.free.fr -->
+<!-- Please visit official no-intro website on http://www.gbadat.altervista.org> -->
+<!-- Download OfflineList on http://offlinelist.free.fr> -->
+
+<!-- Datter : Lukeage & SolidSnake -->
+<!-- Pictures by : yu-ji & Partnable et Robiche -->
+<!-- OL Datter : Partnable et Robiche -->
+
+<dat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="datas.xsd">
+	<configuration>
+		<datName>Official No-Intro Pokemon Mini</datName>
+		<datVersion>829131802</datVersion>
+		<system>Nintendo Pokemon Mini</system>
+		<screenshotsWidth>96</screenshotsWidth>
+		<screenshotsHeight>64</screenshotsHeight>
+		<infos>
+			<title visible="false" inNamingOption="true" default="false"></title>
+			<location visible="true" inNamingOption="true" default="true"></location>
+			<publisher visible="false" inNamingOption="false" default="false"></publisher>
+			<sourceRom visible="false" inNamingOption="false" default="false"></sourceRom>
+			<saveType visible="false" inNamingOption="false" default="false"></saveType>
+			<romSize visible="true" inNamingOption="true" default="true"></romSize>
+			<releaseNumber visible="true" inNamingOption="true" default="false"></releaseNumber>
+			<languageNumber visible="true" inNamingOption="true" default="false"></languageNumber>
+			<comment visible="true" inNamingOption="true" default="true"></comment>
+			<romCRC visible="true" inNamingOption="true" default="true"></romCRC>
+			<im1CRC visible="true" inNamingOption="true" default="false"></im1CRC>
+			<im2CRC visible="true" inNamingOption="true" default="false"></im2CRC>
+			<languages visible="true" inNamingOption="true" default="true"></languages>
+		</infos>
+		<canOpen>
+			<extension>.min</extension>
+		</canOpen>
+		<newDat>
+			<datVersionURL>http://nointro.free.fr/version/Official%20No-Intro%20Pokemon%20Mini_version</datVersionURL>
+			<datURL fileName="Official No-Intro Pokemon Mini.zip">http://nointro.free.fr/datas/Official%20No-Intro%20Pokemon%20Mini.zip</datURL>
+			<imURL>http://nointro.free.fr/imgs/Official%20No-Intro%20Pokemon%20Mini/</imURL>
+		</newDat>
+		<search>
+			<to value="location" default="true" auto="true"></to>
+			<to value="romSize" default="true" auto="false">
+				<find operation="=" value="4096">= 32 KBits</find>
+				<find operation="=" value="524288">= 4 MBits</find>
+			</to>
+			<to value="languages" default="true" auto="true"></to>
+		</search>
+		<romTitle>%n %o %m %e</romTitle>
+	</configuration>
+	<games>
+
+		<game>
+			<imageNumber>50003</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Nintendo Pokemon Mini</title>
+			<saveType></saveType>
+			<romSize>4096</romSize>
+			<publisher></publisher>
+			<location>17</location>
+			<sourceRom></sourceRom>
+			<language>258</language>
+			<files>
+				<romCRC extension=".min">AED3C14D</romCRC>
+			</files>
+			<im1CRC>69B4A221</im1CRC>
+			<im2CRC>E6B81CB6</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50022</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Lunch Time</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">05C5C126</romCRC>
+			</files>
+			<im1CRC>5F2FFD96</im1CRC>
+			<im2CRC>3F5ACA8B</im2CRC>
+			<comment>(GameCube)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50001</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pichu Bros. Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">00D8C968</romCRC>
+			</files>
+			<im1CRC>6F6535C2</im1CRC>
+			<im2CRC>1A9313DC</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pichu Bros. Mini - Hoppip's Jump Match</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">BE22866A</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Preview)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pichu Bros. Mini - Netsukikyuu</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">A22D00A7</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Preview)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pichu Bros. Mini - Skateboard</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">DEC65262</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Preview)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50002</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Anime Card Daisakusen</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">199D7AB1</romCRC>
+			</files>
+			<im1CRC>32375E28</im1CRC>
+			<im2CRC>88144A68</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50005</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">54ACB670</romCRC>
+			</files>
+			<im1CRC>E9C404E0</im1CRC>
+			<im2CRC>3F005656</im2CRC>
+			<comment></comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">938D3819</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment></comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Baseline Judge</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">0E1E150B</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Gamecube)</comment>
+			<duplicateID>2</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Baseline Judge</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">F5192440</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Gamecube)</comment>
+			<duplicateID>2</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Baseline Judge</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">0CFB4D1C</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube)</comment>
+			<duplicateID>2</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Chansey's Dribble</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">BA504497</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Pikachu's Rocket Start</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">F15964AF</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Ricochet Dribble</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">D09DB45C</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Gamecube)</comment>
+			<duplicateID>4</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Ricochet Dribble</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">3322ED38</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube)</comment>
+			<duplicateID>4</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Rocket Start</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">44C5271E</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Party Mini - Slowking's Judge</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">9FD4D48B</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50009</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Pinball Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">398D47DE</romCRC>
+			</files>
+			<im1CRC>E53CDB04</im1CRC>
+			<im2CRC>A291DB06</im2CRC>
+			<comment></comment>
+			<duplicateID>5</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Pinball Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">88CA8CC5</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Preview)</comment>
+			<duplicateID>5</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50008</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Pinball Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">A0091534</romCRC>
+			</files>
+			<im1CRC>3CEFBA12</im1CRC>
+			<im2CRC>68A8C6D9</im2CRC>
+			<comment></comment>
+			<duplicateID>5</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Pinball Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">50AD9D57</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube Preview)</comment>
+			<duplicateID>5</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Puzzle Collection</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>5</location>
+			<sourceRom></sourceRom>
+			<language>1</language>
+			<files>
+				<romCRC extension=".min">7776F2BB</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube Preview)</comment>
+			<duplicateID>7</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50012</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Puzzle Collection</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>2</location>
+			<sourceRom></sourceRom>
+			<language>64</language>
+			<files>
+				<romCRC extension=".min">22101046</romCRC>
+			</files>
+			<im1CRC>F242F5C0</im1CRC>
+			<im2CRC>F4DA1F23</im2CRC>
+			<comment></comment>
+			<duplicateID>7</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Puzzle Collection</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>2</location>
+			<sourceRom></sourceRom>
+			<language>64</language>
+			<files>
+				<romCRC extension=".min">0E7752E8</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube Preview)</comment>
+			<duplicateID>7</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50014</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Puzzle Collection</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">95AFAE59</romCRC>
+			</files>
+			<im1CRC>6B1FEAC7</im1CRC>
+			<im2CRC>988A6A50</im2CRC>
+			<comment></comment>
+			<duplicateID>7</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Puzzle Collection</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">DA278854</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Gamecube)</comment>
+			<duplicateID>7</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Puzzle Collection</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">2B348340</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment></comment>
+			<duplicateID>7</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Puzzle Collection</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>1</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">6F8AE656</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube Preview)</comment>
+			<duplicateID>7</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50016</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Puzzle Collection Vol. 2</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">76A1BBF8</romCRC>
+			</files>
+			<im1CRC>BEED9220</im1CRC>
+			<im2CRC>9B713C8D</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50017</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Race Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">F8C842B5</romCRC>
+			</files>
+			<im1CRC>0532BC53</im1CRC>
+			<im2CRC>2E159213</im2CRC>
+			<comment></comment>
+			<duplicateID>9</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Race Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">8F731830</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Preview)</comment>
+			<duplicateID>9</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50020</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Shock Tetris</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">B4B5CC20</romCRC>
+			</files>
+			<im1CRC>166C157A</im1CRC>
+			<im2CRC>0AEDCE37</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50018</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Sodateyasan Mini</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">D55FC4C8</romCRC>
+			</files>
+			<im1CRC>CA891725</im1CRC>
+			<im2CRC>8F1D1A04</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50019</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Tetris</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">2FB23527</romCRC>
+			</files>
+			<im1CRC>B6D9750E</im1CRC>
+			<im2CRC>13D0232E</im2CRC>
+			<comment>(M3)</comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Zany Cards</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>5</location>
+			<sourceRom></sourceRom>
+			<language>1</language>
+			<files>
+				<romCRC extension=".min">830DA957</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment></comment>
+			<duplicateID>10</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50021</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pokemon Zany Cards</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>2</location>
+			<sourceRom></sourceRom>
+			<language>64</language>
+			<files>
+				<romCRC extension=".min">C009D501</romCRC>
+			</files>
+			<im1CRC>DF6F3839</im1CRC>
+			<im2CRC>187DFD0B</im2CRC>
+			<comment></comment>
+			<duplicateID>10</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Snorlax's Lunch Time</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>0</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".min">B9324F30</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(GameCube)</comment>
+			<duplicateID>11</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Snorlax's Lunch Time</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">0186EA70</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Gamecube)</comment>
+			<duplicateID>11</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50024</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Togepi no Daibouken</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">33B3492B</romCRC>
+			</files>
+			<im1CRC>FBC0BAA8</im1CRC>
+			<im2CRC>F72CD252</im2CRC>
+			<comment></comment>
+			<duplicateID>12</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Togepi no Daibouken</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>7</location>
+			<sourceRom></sourceRom>
+			<language>256</language>
+			<files>
+				<romCRC extension=".min">8C557C89</romCRC>
+			</files>
+			<im1CRC>616919B9</im1CRC>
+			<im2CRC>616919B9</im2CRC>
+			<comment>(Preview)</comment>
+			<duplicateID>12</duplicateID>
+		</game>
+	</games>
+</dat>
+

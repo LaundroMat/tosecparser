@@ -90,19 +90,23 @@ class NoIntroOfflineListParser(object):
 
     def get_game_publisher(self, game_element):
         text = game_element.find('publisher').text
-        publisher = re.sub(r"\(.*\)$", '', text).strip()
-        if publisher == '':
-            publisher = None
-        return publisher
+        if text:
+            publisher = re.sub(r"\(.*\)$", '', text).strip()
+            if publisher == '':
+                publisher = None
+            return publisher
+        return None
 
     def get_game_date(self, game_element):
         text = game_element.find('publisher').text
-        date = re.search("\(.*\)$", text)
-        if date:
-            date = date.group()[1:-1]
-        if date == "????-??-??":
-            date = None
-        return date
+        if text:
+            date = re.search("\(.*\)$", text)
+            if date:
+                date = date.group()[1:-1]
+            if date == "????-??-??":
+                date = None
+            return date
+        return None
 
     def get_game_language(self, game_element):
         offlinelist_language_codes = [n for n in self.languages.keys()]

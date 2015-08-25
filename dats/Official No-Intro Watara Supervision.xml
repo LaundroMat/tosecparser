@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Dat by Patrick (nointro@free.fr) aka [-F1-] on IRC, Dat and Images Hosted on http://nointro.free.fr -->
+<!-- Please visit official no-intro website on http://www.gbadat.altervista.org> -->
+<!-- Download OfflineList on http://offlinelist.free.fr> -->
+
+<!-- Datter : BigFred -->
+<!-- Pictures by : yu-ji -->
+<!-- OL Datter : Patrick -->
+
+<dat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="datas.xsd">
+	<configuration>
+		<datName>Official No-Intro Watara Supervision</datName>
+		<datVersion>829131921</datVersion>
+		<system>Watara Supervision</system>
+		<screenshotsWidth>160</screenshotsWidth>
+		<screenshotsHeight>160</screenshotsHeight>
+		<infos>
+			<title visible="false" inNamingOption="true" default="false"></title>
+			<location visible="true" inNamingOption="true" default="true"></location>
+			<publisher visible="false" inNamingOption="false" default="false"></publisher>
+			<sourceRom visible="false" inNamingOption="false" default="false"></sourceRom>
+			<saveType visible="false" inNamingOption="false" default="false"></saveType>
+			<romSize visible="true" inNamingOption="true" default="true"></romSize>
+			<releaseNumber visible="true" inNamingOption="true" default="false"></releaseNumber>
+			<languageNumber visible="true" inNamingOption="true" default="false"></languageNumber>
+			<comment visible="true" inNamingOption="true" default="true"></comment>
+			<romCRC visible="true" inNamingOption="true" default="true"></romCRC>
+			<im1CRC visible="true" inNamingOption="true" default="false"></im1CRC>
+			<im2CRC visible="true" inNamingOption="true" default="false"></im2CRC>
+			<languages visible="true" inNamingOption="true" default="true"></languages>
+		</infos>
+		<canOpen>
+			<extension>.sv</extension>
+		</canOpen>
+		<newDat>
+			<datVersionURL>http://nointro.free.fr/version/Official%20No-Intro%20Watara%20Supervision_version</datVersionURL>
+			<datURL fileName="Official No-Intro Watara Supervision.zip">http://nointro.free.fr/datas/Official%20No-Intro%20Watara%20Supervision.zip</datURL>
+			<imURL>http://nointro.free.fr/imgs/Official%20No-Intro%20Watara%20Supervision/</imURL>
+		</newDat>
+		<search>
+			<to value="romSize" default="true" auto="false">
+				<find operation="=" value="32768">= 256 KBits</find>
+				<find operation="=" value="65536">= 512 KBits</find>
+			</to>
+		</search>
+		<romTitle>%n %o %m %e</romTitle>
+	</configuration>
+	<games>
+
+		<game>
+			<imageNumber>50001</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>2 in 1 - Block Buster + Cross High</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">7E05D84F</romCRC>
+			</files>
+			<im1CRC>7C0D774A</im1CRC>
+			<im2CRC>F3B77821</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50002</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>2 in 1 - Hash Blocks + Eagle Plan</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">C1354952</romCRC>
+			</files>
+			<im1CRC>19FA0B21</im1CRC>
+			<im2CRC>03B92C1D</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50003</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Alien</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">8DBB2C53</romCRC>
+			</files>
+			<im1CRC>F4DFF3B1</im1CRC>
+			<im2CRC>D03CB369</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50004</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Balloon Fight</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">8188B755</romCRC>
+			</files>
+			<im1CRC>E0E852E3</im1CRC>
+			<im2CRC>DCF5301B</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50005</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Block Buster</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">0A3DB285</romCRC>
+			</files>
+			<im1CRC>3C5F2290</im1CRC>
+			<im2CRC>8F59977F</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50006</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Brain Power</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">5E6706B9</romCRC>
+			</files>
+			<im1CRC>429BCB98</im1CRC>
+			<im2CRC>B36587E2</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50007</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Carrier</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">5ECFB674</romCRC>
+			</files>
+			<im1CRC>DE1F7A05</im1CRC>
+			<im2CRC>9AD7ADD9</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50008</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Cave Wonders</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">E0266CE7</romCRC>
+			</files>
+			<im1CRC>9D483F1F</im1CRC>
+			<im2CRC>AFBFCB22</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50009</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Challenger Tank</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">C92382CE</romCRC>
+			</files>
+			<im1CRC>E16B6440</im1CRC>
+			<im2CRC>33356D41</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50010</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Chimera</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">4A458AA8</romCRC>
+			</files>
+			<im1CRC>EEDE75FB</im1CRC>
+			<im2CRC>B69613A1</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50011</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Crystball</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">10DCC110</romCRC>
+			</files>
+			<im1CRC>09AAB751</im1CRC>
+			<im2CRC>112C8D91</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50012</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Delta Hero</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">32CCDF89</romCRC>
+			</files>
+			<im1CRC>E231D6AE</im1CRC>
+			<im2CRC>54DB545F</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50013</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Eagle Plan</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">01CB8364</romCRC>
+			</files>
+			<im1CRC>B96803C3</im1CRC>
+			<im2CRC>166A234A</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50014</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Earth Defender</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">A6CBB074</romCRC>
+			</files>
+			<im1CRC>BD8BA07A</im1CRC>
+			<im2CRC>25655B77</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50015</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Fatal Craft</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">917CAB48</romCRC>
+			</files>
+			<im1CRC>D1CC944D</im1CRC>
+			<im2CRC>C267831E</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50016</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Final Combat</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">465D78CD</romCRC>
+			</files>
+			<im1CRC>5EF9A239</im1CRC>
+			<im2CRC>B938E470</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50017</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Galactic Crusader</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">B494BC5C</romCRC>
+			</files>
+			<im1CRC>C8C5A4B1</im1CRC>
+			<im2CRC>A79B0820</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50018</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Galaxy Fighter</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">581703BE</romCRC>
+			</files>
+			<im1CRC>247FA60D</im1CRC>
+			<im2CRC>52B967B1</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50019</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Grand Prix</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">CEF3F295</romCRC>
+			</files>
+			<im1CRC>0D9F20C7</im1CRC>
+			<im2CRC>254786DF</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50020</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Happy Pairs</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">112F5EED</romCRC>
+			</files>
+			<im1CRC>88546E13</im1CRC>
+			<im2CRC>16EF1E36</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50021</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Hash Blocks</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">6BD7C885</romCRC>
+			</files>
+			<im1CRC>34C6CD92</im1CRC>
+			<im2CRC>3A0A5837</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50022</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Hero Kid</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">25DDD6E1</romCRC>
+			</files>
+			<im1CRC>0A2BB6DF</im1CRC>
+			<im2CRC>0422E289</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50023</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Honey Bee</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">E856875A</romCRC>
+			</files>
+			<im1CRC>5E863CB4</im1CRC>
+			<im2CRC>C12ED08F</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50024</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Jacky Lucky</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">7D8A607F</romCRC>
+			</files>
+			<im1CRC>4BE72E1F</im1CRC>
+			<im2CRC>19BEFA4D</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50025</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Jaguar Bomber</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">AA4372D4</romCRC>
+			</files>
+			<im1CRC>0DE68FC0</im1CRC>
+			<im2CRC>70C1385B</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50026</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>John Adventure</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">E9EA3AE0</romCRC>
+			</files>
+			<im1CRC>17B59FAD</im1CRC>
+			<im2CRC>B6483798</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50027</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Juggler</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">32E68D6F</romCRC>
+			</files>
+			<im1CRC>DDD8B78E</im1CRC>
+			<im2CRC>72FBAFAE</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50028</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Kabi Island - Gold in Island</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">2BC03096</romCRC>
+			</files>
+			<im1CRC>62413665</im1CRC>
+			<im2CRC>5420E388</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50029</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Linear Racing</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">6F8ABAF9</romCRC>
+			</files>
+			<im1CRC>DDA30CCF</im1CRC>
+			<im2CRC>2B0F9EBB</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50030</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Magincross</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">E406A91C</romCRC>
+			</files>
+			<im1CRC>83548822</im1CRC>
+			<im2CRC>1CB1AC4C</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50031</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Matta Blatta</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">21864295</romCRC>
+			</files>
+			<im1CRC>51F91EC3</im1CRC>
+			<im2CRC>31E523A1</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50032</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Olympic Trials</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">85DC8111</romCRC>
+			</files>
+			<im1CRC>26C07086</im1CRC>
+			<im2CRC>89A856A2</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50033</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>P-52 Sea Battle</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">748F9DAE</romCRC>
+			</files>
+			<im1CRC>57E0B143</im1CRC>
+			<im2CRC>6E5B1E11</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50034</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>PacBoy &amp; Mouse</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">1A89AC88</romCRC>
+			</files>
+			<im1CRC>FA4B2CC5</im1CRC>
+			<im2CRC>E683D7FC</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50035</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Penguin Hideout</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">FE5F9774</romCRC>
+			</files>
+			<im1CRC>FA3B1135</im1CRC>
+			<im2CRC>4ABD7A9E</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50036</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Police Bust</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">531F0B51</romCRC>
+			</files>
+			<im1CRC>C82E6CFF</im1CRC>
+			<im2CRC>CA1B8ABF</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50037</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Pyramid</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">E0BFE163</romCRC>
+			</files>
+			<im1CRC>A3EBC1B2</im1CRC>
+			<im2CRC>8914F6BE</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50038</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Soccer Champion</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">45204DC4</romCRC>
+			</files>
+			<im1CRC>6B4F6096</im1CRC>
+			<im2CRC>F591E187</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50039</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>SSSnake</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">BE9B6F10</romCRC>
+			</files>
+			<im1CRC>44D3EA6E</im1CRC>
+			<im2CRC>3299425F</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50040</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Super Block</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">02E2C7AD</romCRC>
+			</files>
+			<im1CRC>9BAFD01C</im1CRC>
+			<im2CRC>6F1E702F</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50041</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Super Kong</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">59C7FF64</romCRC>
+			</files>
+			<im1CRC>02745F1A</im1CRC>
+			<im2CRC>E326329D</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50042</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Tasac 2010</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">3D5F3964</romCRC>
+			</files>
+			<im1CRC>D4983673</im1CRC>
+			<im2CRC>D58EB1FE</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50043</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Tennis Pro '92</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">BD004CB7</romCRC>
+			</files>
+			<im1CRC>F8F278F9</im1CRC>
+			<im2CRC>CE700039</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>50044</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Treasure Hunter</title>
+			<saveType></saveType>
+			<romSize>65536</romSize>
+			<publisher></publisher>
+			<location>16</location>
+			<sourceRom></sourceRom>
+			<language>2</language>
+			<files>
+				<romCRC extension=".sv">DB35B809</romCRC>
+			</files>
+			<im1CRC>5F5ECED7</im1CRC>
+			<im2CRC>B1E49DA4</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+	</games>
+</dat>
+

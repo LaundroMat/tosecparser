@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Dat by Patrick (nointro@free.fr) aka [-F1-] on IRC, Dat and Images Hosted on http://nointro.free.fr -->
+<!-- Please visit official no-intro website on http://www.gbadat.altervista.org> -->
+<!-- Download OfflineList on http://offlinelist.free.fr> -->
+
+<!-- Datter : SolidnSake -->
+<!-- Pictures by : Patrick -->
+<!-- OL Datter : Patrick -->
+
+<dat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="datas.xsd">
+	<configuration>
+		<datName>Official No-Intro Tiger Game.Com</datName>
+		<datVersion>1046003324</datVersion>
+		<system>Tiger - Game.com</system>
+		<screenshotsWidth>200</screenshotsWidth>
+		<screenshotsHeight>160</screenshotsHeight>
+		<infos>
+			<title visible="false" inNamingOption="true" default="false"></title>
+			<location visible="true" inNamingOption="true" default="true"></location>
+			<publisher visible="false" inNamingOption="false" default="false"></publisher>
+			<sourceRom visible="false" inNamingOption="false" default="false"></sourceRom>
+			<saveType visible="false" inNamingOption="false" default="false"></saveType>
+			<romSize visible="true" inNamingOption="true" default="true"></romSize>
+			<releaseNumber visible="true" inNamingOption="true" default="false"></releaseNumber>
+			<languageNumber visible="true" inNamingOption="true" default="false"></languageNumber>
+			<comment visible="true" inNamingOption="true" default="true"></comment>
+			<romCRC visible="true" inNamingOption="true" default="true"></romCRC>
+			<im1CRC visible="true" inNamingOption="true" default="false"></im1CRC>
+			<im2CRC visible="true" inNamingOption="true" default="false"></im2CRC>
+			<languages visible="true" inNamingOption="true" default="true"></languages>
+		</infos>
+		<canOpen>
+			<extension>.tgc</extension>
+		</canOpen>
+		<newDat>
+			<datVersionURL>http://nointro.free.fr/version/Official%20No-Intro%20Tiger%20Game.Com_version</datVersionURL>
+			<datURL fileName="Official No-Intro Tiger Game.Com.zip">http://nointro.free.fr/datas/Official%20No-Intro%20Tiger%20Game.Com.zip</datURL>
+			<imURL>http://nointro.free.fr/imgs/Official%20No-Intro%20Tiger%20Game.Com/</imURL>
+		</newDat>
+		<search>
+			<to value="romSize" default="true" auto="false">
+				<find operation="=" value="32768">= 256 KBits</find>
+				<find operation="=" value="65536">= 512 KBits</find>
+				<find operation="=" value="131072">= 1 MBits</find>
+				<find operation="=" value="262144">= 2 MBits</find>
+				<find operation="=" value="524288">= 4 MBits</find>
+				<find operation="=" value="1048576">= 8 MBits</find>
+				<find operation="=" value="2097152">= 16 MBits</find>
+			</to>
+		</search>
+		<romTitle>%n %o %m %e</romTitle>
+	</configuration>
+	<games>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Tiger Game.com</title>
+			<saveType></saveType>
+			<romSize>262144</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">E235A589</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(External)</comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>[BIOS] Tiger Game.com</title>
+			<saveType></saveType>
+			<romSize>4096</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">A0CEC361</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment>(Internal)</comment>
+			<duplicateID>1</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Batman &amp; Robin</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">B336E530</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Centipede</title>
+			<saveType></saveType>
+			<romSize>262144</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">1A041FF0</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Duke Nukem 3D</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">884568D1</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Fighters Megamix</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">061E943F</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Frogger</title>
+			<saveType></saveType>
+			<romSize>1048576</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">10E4C5CD</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Henry</title>
+			<saveType></saveType>
+			<romSize>1048576</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">75D3C8D8</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Indy 500</title>
+			<saveType></saveType>
+			<romSize>1048576</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">845ED281</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Internet</title>
+			<saveType></saveType>
+			<romSize>262144</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">7E721A84</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Jeopardy!</title>
+			<saveType></saveType>
+			<romSize>1048576</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">8C512912</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Jurassic Park - The Lost World</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">B422C5F8</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Lights Out</title>
+			<saveType></saveType>
+			<romSize>32768</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">496EFA62</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Monopoly</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">D6A65A07</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Mortal Kombat Trilogy</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">BD29C844</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Quiz Wiz - Cyber Trivia</title>
+			<saveType></saveType>
+			<romSize>1048576</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">0E018F6A</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Resident Evil 2</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">0984C7F5</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Scrabble</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">4D4AD909</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Sonic Jam</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">8B4A63F9</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Tiger Casino</title>
+			<saveType></saveType>
+			<romSize>2097152</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">E7FB8FD9</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Tiger Web Link</title>
+			<saveType></saveType>
+			<romSize>262144</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">4C13E65B</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Wheel of Fortune</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">048347A0</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Wheel of Fortune 2</title>
+			<saveType></saveType>
+			<romSize>524288</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">B91E2E32</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+
+		<game>
+			<imageNumber>0</imageNumber>
+			<releaseNumber>0</releaseNumber>
+			<title>Williams Arcade Classics</title>
+			<saveType></saveType>
+			<romSize>1048576</romSize>
+			<publisher></publisher>
+			<location>-1</location>
+			<sourceRom></sourceRom>
+			<language>0</language>
+			<files>
+				<romCRC extension=".tgc">F894065D</romCRC>
+			</files>
+			<im1CRC>78175125</im1CRC>
+			<im2CRC>78175125</im2CRC>
+			<comment></comment>
+			<duplicateID>0</duplicateID>
+		</game>
+	</games>
+</dat>
+

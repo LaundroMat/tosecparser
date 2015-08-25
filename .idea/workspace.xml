@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9475eb18-4972-4fa3-83c5-f19c194b7684" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/parsers/offlinelist_no_intro_xml_parser.py" />
-      <change type="DELETED" beforePath="C:\Users\Mathieu\Development\tosecparser\tosecparser.git\parsers\parser.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Mathieu\Development\tosecparser\tosecparser.git\Amstrad CPC - Games - [DSK] (TOSEC-v2015-05-07_CM).dat" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Mathieu\Development\tosecparser\tosecparser.git\Official No-Intro Nintendo Gameboy Advance Alpha (Date).xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parsers/offlinelist_no_intro_xml_parser.py" afterPath="$PROJECT_DIR$/parsers/offlinelist_no_intro_xml_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tosecimport.py" afterPath="$PROJECT_DIR$/tosecimport.py" />
     </list>
     <ignored path="tosecparser.git.iws" />
@@ -28,62 +29,32 @@
     <favorites_list name="tosecparser.git" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.8755981">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="tosecimport.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tosecimport.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#0#76#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="offlinelist_no_intro_xml_parser.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/parsers/offlinelist_no_intro_xml_parser.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.38980892">
-                  <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="scratch_1" pinned="false" current-in-tab="false">
-            <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="offlinelist_no_intro_xml_parser.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/parsers/offlinelist_no_intro_xml_parser.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.8888888">
-                  <caret line="109" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="tosecimport.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tosecimport.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35533553">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#76#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="offlinelist_no_intro_xml_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parsers/offlinelist_no_intro_xml_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -99,8 +70,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/parsers/no_intro_parser.py" />
-        <option value="$PROJECT_DIR$/tosecimport.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1" />
+        <option value="$PROJECT_DIR$/tosecimport.py" />
         <option value="$PROJECT_DIR$/parsers/offlinelist_no_intro_xml_parser.py" />
       </list>
     </option>
@@ -446,24 +417,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/parsers/tosec_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tosecimport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -472,12 +425,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/parsers/tosec_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8407643">
+          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/parsers/offlinelist_no_intro_xml_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38980892">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tosecimport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35533553">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#76#0" expanded="true" />
           </folding>
         </state>
       </provider>

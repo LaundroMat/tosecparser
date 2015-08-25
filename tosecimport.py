@@ -1,7 +1,6 @@
 from parsers.offlinelist_no_intro_xml_parser import NoIntroOfflineListParser
 from parsers.tosec_parser import TosecParser, TosecNamingConvention
 
-
 def convert_dat_to_dicts(filename):
     print("Importing {}".format(filename))
     with open(filename, 'r') as tosec_dat:
@@ -19,12 +18,9 @@ def convert_dat_to_dicts(filename):
         print(tnc.__dict__)
 
 
-def import_dat_file(filename):
+def import_xml_dat_file(filename):
     p = NoIntroOfflineListParser(filename)
     p.parse()
-    for game in p.games:
-        print(game)
-    print('************************')
     print('{} games parsed.'.format(len(p.games)))
 
 import argparse
@@ -37,4 +33,4 @@ parser.add_argument("-p", help="parser")
 
 args = parser.parse_args()
 
-import_dat_file(args.filename)
+import_xml_dat_file(args.filename)
