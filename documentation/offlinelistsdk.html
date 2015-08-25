@@ -1,0 +1,906 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+<body>
+<h1 style="text-align: center;">SDK for OfflineList</h1>
+<a href="#Plugin">1. Plugin</a><br>
+&nbsp; <a href="#Some_declaration:">1.1. Some declaration</a><br>
+&nbsp; <a href="#Plugin"><a href="#Function_Summary">1.2. Function
+summary</a></a><br>
+<a href="#Module">2. Module</a><br>
+&nbsp; <a href="#Some_declaration:_">2.1. Some declaration</a><br>
+&nbsp; <a href="#Function_Summary_">2.2. Function summary</a><br>
+<h2><a name="Plugin"></a>Plugin</h2>
+<h3><a name="Some_declaration:"></a>Some declaration</h3>
+<span style="color: rgb(0, 0, 153);">Functions for launch the emulator:<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">typedef void
+(__stdcall FLaunchEmulatorFile)(char *fileName);</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">type
+FLaunchEmulatorFile = procedure(fileName:PChar); stdcall;</span></small><span
+ style="color: rgb(0, 0, 153);"><br>
+</span><span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fileName : indicate the complete path of the rom (archived or not).</span><br>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">typedef void
+(__stdcall FLaunchEmulatorCRC)(char *crc);</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">type
+FLaunchEmulatorCRC = procedure(crc:PChar); stdcall;</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+crc : indicate the crc of the file you want launch with the emulator.<br>
+<br>
+</span><span style="color: rgb(0, 0, 153);">Function for add files:</span><br>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">typedef void
+(__stdcall FAddRoms)(char *files);</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">FAddRoms =
+procedure(files:PChar);</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+files is a string representing the files names separated by the char
+"\0" (#0 in delphi) and terminated by a doble "\0".</span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp; &nbsp; &nbsp;
+&nbsp; The files can be archives or simple files.</span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp; &nbsp; &nbsp;
+&nbsp; Exemple:</span><br style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; - for one file: "C:\\foo.zip\0\0" (or 'C:\foo.zip'
++ #0#0 in delphi)</span><br style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - for more than one files:
+"C:\\foo.zip\0D:\\foo2.gba\0 ... D:\\foox.gba\0\0"<br>
+<br>
+</span><span style="color: rgb(0, 0, 153);">Function for get the
+unknows files
+folder:</span><br>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">typedef char
+*(__stdcall FGetUnknownROMSDir)();</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">FGetUnknownROMSDir
+= function(): pchar; stdcall;</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the path of the unknown files folder.</span><br>
+<br>
+<span style="color: rgb(0, 0, 153);">Fonction for extracting files:</span><br>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">typedef INT32
+(__stdcall FExtractRom)(char *crc, char *folder, INT32 patch, INT32
+overwrite);</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">FExtractRom =
+function(crc:PChar; folder: PChar; patch:Integer; overwrite:Integer):
+Integer; stdcall;</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+crc: extract file with the correponding crc.</span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+folder: the folder to extract files.</span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+patch: specify if the files must be patched by the modules activated (0
+for not patch, other values to patch).</span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+overwrite: specify if the extraction can overwrite existing files.</span><br>
+<br>
+<span style="color: rgb(0, 0, 153);">Structure for files info:</span><br>
+<span style="font-weight: bold;">C++:</span> <br>
+<small><span style="font-family: courier new,courier,monospace;">typedef
+struct s_info{</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+s_info *nextInfo; // the next game selected.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *crc; // indicate the crc of the rom file.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *name; // indicate the name of the game.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *named; // indicate the rom naming.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+long num; // indicate the release number of the rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+long size; // indicate the size of the rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+INT32 location; // indicate the location of the rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+INT32 language; // indicate the Language(s) of the rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *save; // indicate the save type of the rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *publisher; // this is the publisher of the game.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *sourceItem; // this is the group who release the first dump
+available for the rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *comment; // this is the comment available for this rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *fileExtention; // the file extention of the rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *system; // the system of the dat file who contains this rom.<br>
+&nbsp;&nbsp; char *fileName;<br
+ style="font-family: courier new,courier,monospace;">
+</span><span style="font-family: courier new,courier,monospace;">}
+s_info;</span></small><br>
+<br>
+<span style="font-weight: bold;">Delphi:</span> <br>
+<small><span style="font-family: courier new,courier,monospace;">type</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; PInfo
+= ^TInfo;</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; TInfo
+= record</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+nextInfo: PInfo;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+crc: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+name: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+named: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+num: Integer;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+size: Integer;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+location:Integer;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+language:Integer;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+save: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+publisher: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+sourceItem: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+comment: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+fileExtention: Pchar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+system: Pchar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+fileName: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; end;<br>
+</span></small><span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+nextInfo: the next item selected.</span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+location: the item location, the values are:</span><br
+ style="color: rgb(204, 102, 0);">
+<small style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 0 = Europe<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 1 = USA<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 2 = Germany<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 3 = China<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 4 = Spain<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 5 = France<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 6 = Italy<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 7 = Japan<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 8 = Netherlands<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 9 = England<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 10 = Denmark<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 11 = Finland<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 12 = Norway<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 13 = Poland<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 14 = Portugal<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 15 = Sweden<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 16 = Europe USA<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 17 = Europe USA Japan<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 18 = USA Japan<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 19 = Australia<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 20 = North Korea<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 21 = Brazil<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 22 =&nbsp; South Korea<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 23 = Europe Brazil<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 24 = Europe USA Brazil<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 25 = USA Brazil</small><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+language: the item language(s), the individual values are:</span><br
+ style="color: rgb(204, 102, 0);">
+<small style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 1 = French<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 2 = English (US)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 4 = Chinese<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 8 = Danish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 16 = Dutch<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 32 = Finland<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 64 = German<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 128 = Italian<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 256 = Japanese<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 512 = Norwegian<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 1024 = Polish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 2048 = Portuguese<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 4096 = Spanish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 8192 = Swedish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 16384 = English (UK) (only if English (US) already
+exist)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 32768 = Portuguese (BR)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; 65536 = Korean</small><br>
+<br>
+<span style="color: rgb(0, 0, 153);">Structure for functions:</span><br>
+<span style="font-weight: bold;">C++:</span> <br>
+<small><span style="font-family: courier new,courier,monospace;">typedef
+struct {</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp; </span></small><small><span
+ style="font-family: courier new,courier,monospace;">FExtractRom *</span></small><small><span
+ style="font-family: courier new,courier,monospace;">extractRom;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+FLaunchEmulatorFile *launchEmulatorFile;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+FLaunchEmulatorCRC *launchEmulatorCRC;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+FAddRoms *addRoms;<br>
+</span></small><small><span
+ style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+FGetUnknownROMSDir *</span></small><small><span
+ style="font-family: courier new,courier,monospace;">getUnknownROMSDir;</span></small><br
+ style="font-family: courier new,courier,monospace;">
+<small><span style="font-family: courier new,courier,monospace;"></span><span
+ style="font-family: courier new,courier,monospace;">} s_functions;</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <br>
+<small><span
+ style="color: rgb(0, 0, 153); font-family: courier new,courier,monospace;"></span><span
+ style="font-family: courier new,courier,monospace;">type</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;
+TFunctions=record</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+extractRom: FExtractRom;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+launchEmulatorFile: FLaunchEmulatorFile;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+launchEmulatorCRC: FLaunchEmulatorCRC;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+addRoms: FAddRoms;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+getUnknownROMSDir: FGetUnknownROMSDir;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; end;</span></small><br>
+<br>
+<h3><a name="Function_Summary"></a>Function summary</h3>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall
+closePlugin()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure
+closePlugin; stdcall;</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called when the plugin is deactivated.</span><br>
+<br>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getAuthor()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function
+getAuthor: PChar; stdcall;</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the plugin author.</span><span style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getName()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function getName:
+PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the plugin name.</span><span style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getSDKVersion()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function </span></small><small><span
+ style="font-family: courier new,courier,monospace;">getSDKVersion</span></small><small><span
+ style="font-family: courier new,courier,monospace;">: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the SDK plugin version.</span> <span
+ style="font-weight: bold; color: rgb(255, 0, 0);">NEEDED</span> (the
+SDK version 0.1 to 0.6 are not used anymore)<span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getSmallComment()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function </span></small><small><span
+ style="font-family: courier new,courier,monospace;">getSmallComment</span></small><small><span
+ style="font-family: courier new,courier,monospace;">: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the small comment for describe the plugin.</span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getVersion()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function
+getVersion: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the plugin version.</span><span style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall
+initPlugin(s_functions functions, char *folder)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure </span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><small><span
+ style="font-family: courier new,courier,monospace;">initPlugin</span></small><small><span
+ style="font-family: courier new,courier,monospace;">(functions:
+TFunction; folder:PChar); stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called when the plugin is activated.</span> <span
+ style="font-weight: bold; color: rgb(255, 0, 0);">NEEDED</span><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+functions: The functions structure.</span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+folder: The folder where the plugin can store data.</span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+inMenu()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function </span></small><small><span
+ style="font-family: courier new,courier,monospace;">inMenu</span></small><small><span
+ style="font-family: courier new,courier,monospace;">: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If there are only one menu it will be </span><span
+ style="color: rgb(204, 102, 0);">displayed </span><span
+ style="color: rgb(204, 102, 0);">directly else if there are at least 2
+menus there will be sub-menu of a menu named like the plugin.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return the list of menu
+which should be desplayed in the plugin menu.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The menus must be separated
+by "\0" and the string must be finished by "\0\0"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can add a separator by
+naming a menu "-".<br>
+</span><span style="font-weight: bold;"><br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+inPopupMenu()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function </span></small><small><span
+ style="font-family: courier new,courier,monospace;">inPopupMenu</span></small><small><span
+ style="font-family: courier new,courier,monospace;">: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If there are only one menu it will be displayed directly else if there
+are at least 2 menus there will be sub-menu of a menu named like the
+plugin.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return the list of menu
+which sould be displayed in context menu in the list of item.</span><br>
+<span style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The menus must be separated by "\0" and the string must be finished by
+"\0\0"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can add a separator by
+naming a menu "-".<br>
+</span><span style="font-weight: bold;"><br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+inPopupMenuHave()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function </span></small><small><span
+ style="font-family: courier new,courier,monospace;">inPopupMenuHave</span></small><small><span
+ style="font-family: courier new,courier,monospace;">: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If there are only one menu it will be displayed directly else if there
+are at least 2 menus there will be sub-menu of a menu named like the
+plugin.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return the list of menu
+which sould be displayed in context menu in the list of item. (for
+available item)</span><br>
+<span style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The menus must be separated by "\0" and the string must be finished by
+"\0\0"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can add a separator by
+naming a menu "-".</span><span style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall </span></small><small><span
+ style="font-family: courier new,courier,monospace;">inPopupMenuMiss</span></small><small><span
+ style="font-family: courier new,courier,monospace;">()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function </span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><small><span
+ style="font-family: courier new,courier,monospace;">inPopupMenuMiss</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><small><span
+ style="font-family: courier new,courier,monospace;">: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If there are only one menu it will be displayed directly else if there
+are at least 2 menus there will be sub-menu of a menu named like the
+plugin.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return the list of menu
+which sould be displayed in context menu in the list of item. (for
+missing item)</span><br>
+<span style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The menus must be separated by "\0" and the string must be finished by
+"\0\0"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can add a separator by
+naming a menu "-".</span><span style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">boolean __stdcall
+isCompatible(char *system)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function : PChar;
+stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called for know if the data file is supported by the
+plugin.</span><span style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall
+onMenuClick(INT32 action)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure </span></small><small><span
+ style="font-family: courier new,courier,monospace;">onMenuClick(action:
+Integer)</span></small><small><span
+ style="font-family: courier new,courier,monospace;">; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called when the user click on the context menu of the
+list of item.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The "action" integer
+indicate wich menu is clicked 0 for the first menu, 1 for the second,
+...</span><span style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall
+onPopupMenuClick(INT32 action, s_info itemInfo)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure</span></small><small><span
+ style="font-family: courier new,courier,monospace;"> </span></small><small><span
+ style="font-family: courier new,courier,monospace;">onPopupMenuClick(action:
+Integer; itemInfo: PInfo)</span></small><small><span
+ style="font-family: courier new,courier,monospace;">; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called when the user click on the context menu of the
+list of item</span><span style="color: rgb(204, 102, 0);">.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The "action" integer
+indicate wich menu is clicked 0 for the first menu, 1 for the second, ..</span><span
+ style="color: rgb(204, 102, 0);">.</span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall </span></small><small><span
+ style="font-family: courier new,courier,monospace;">onPopupMenuHaveClick</span></small><small><span
+ style="font-family: courier new,courier,monospace;">(</span></small><small><span
+ style="font-family: courier new,courier,monospace;">INT32 action,
+s_info itemInfo</span></small><small><span
+ style="font-family: courier new,courier,monospace;">)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure</span></small><small><span
+ style="font-family: courier new,courier,monospace;"> </span></small><small><span
+ style="font-family: courier new,courier,monospace;">onPopupMenuHaveClick</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><small><span
+ style="font-family: courier new,courier,monospace;">(action: Integer;
+itemInfo: PInfo)</span></small><small><span
+ style="font-family: courier new,courier,monospace;">; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color: rgb(204, 102, 0);">This function is called
+when the user click on the context menu of the list of item </span><span
+ style="color: rgb(204, 102, 0);">(for available item)</span><span
+ style="color: rgb(204, 102, 0);">.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The "action" integer
+indicate wich menu is clicked 0 for the first menu, 1 for the second, ..</span><span
+ style="color: rgb(204, 102, 0);">.</span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall </span></small><small><span
+ style="font-family: courier new,courier,monospace;">onPopupMenuMissClick</span></small><small><span
+ style="font-family: courier new,courier,monospace;">(</span></small><small><span
+ style="font-family: courier new,courier,monospace;">INT32 action,
+s_info itemInfo</span></small><small><span
+ style="font-family: courier new,courier,monospace;">)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure</span></small><small><span
+ style="font-family: courier new,courier,monospace;"> </span></small><small><span
+ style="font-family: courier new,courier,monospace;">onPopupMenuMissClick</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><small><span
+ style="font-family: courier new,courier,monospace;">(action: Integer;
+itemInfo: PInfo)</span></small><small><span
+ style="font-family: courier new,courier,monospace;">; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color: rgb(204, 102, 0);">This function is called
+when the user click on the context menu of the list of item </span><span
+ style="color: rgb(204, 102, 0);">(for </span><span
+ style="color: rgb(204, 102, 0);">missing </span><span
+ style="color: rgb(204, 102, 0);">item)</span><span
+ style="color: rgb(204, 102, 0);">.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The "action" integer
+indicate wich menu is clicked 0 for the first menu, 1 for the second, ..</span><span
+ style="color: rgb(204, 102, 0);">.</span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall
+rename(INT32 language)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure
+rename(language: Integer)</span></small><small><span
+ style="font-family: courier new,courier,monospace;">; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called at startup of OfflineList and when the user
+change the selected language.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The language value:<br>
+<small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; - 0 : English<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 1 :
+French<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 2 : Chinese (Simp)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+- 3 : Chinese (Trad)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 4 : German<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 5 :
+Dutch<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 6 : Italian<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+- 7 : Japanese<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 8 : Norwegian<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 9 :
+Polish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 10 : Portuguese (Brazil)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+- 11 : Spanish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 12 : Spanish (Mexico)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 13
+: Swedish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 14 : Danish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+- 15 : Czech<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 16 : ... .</small></span><span style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"></span><span style="font-weight: bold;"></span><br>
+<h2><a name="Module"></a>Module</h2>
+<h3><a name="Some_declaration:_"></a>Some declaration</h3>
+<span style="font-weight: bold;">C++:</span> <small><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">typedef
+struct {<br>
+&nbsp;&nbsp; char *filePath;<br
+ style="font-family: courier new,courier,monospace;">
+</span><span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *crc; // indicate the crc of the rom file.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *name; // indicate the name of the game.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+char *named; // indicate the rom naming.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;
+INT32 num; // indicate the release number of the rom.</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">} s_item;<br>
+<br>
+</span></small><span style="font-weight: bold;">Delphi:</span> <br>
+<small><span style="font-family: courier new,courier,monospace;">type</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; TItem
+= record</span><br style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+filePath : PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+crc: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+name: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+named: PChar;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp;&nbsp;&nbsp;
+num: Integer;</span><br
+ style="font-family: courier new,courier,monospace;">
+<span style="font-family: courier new,courier,monospace;">&nbsp; end;<br>
+</span></small><span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+filePath: the path of the file to modify</span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+crc: the item/file crc</span><br style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+name: the item name</span><br style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+named: the item "naming"</span><br style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+num: the item number</span><br>
+<h3><a name="Function_Summary_"></a>Function summary</h3>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall
+closeModule()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure
+closeModule; stdcall;</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called when the module is deactivated.<br>
+</span><br>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall </span></small><small><span
+ style="font-family: courier new,courier,monospace;">editRom</span></small><small><span
+ style="font-family: courier new,courier,monospace;">(s_item *item)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure
+editRom(item: TItem); stdcall;</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Function for edit an item.<br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getAuthor()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function
+getAuthor: PChar; stdcall;</span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the </span><span style="color: rgb(204, 102, 0);">module </span><span
+ style="color: rgb(204, 102, 0);">author.</span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getName()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function getName:
+PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the </span><span style="color: rgb(204, 102, 0);">module </span><span
+ style="color: rgb(204, 102, 0);">name.</span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getSDKVersion()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function </span></small><small><span
+ style="font-family: courier new,courier,monospace;">getSDKVersion</span></small><small><span
+ style="font-family: courier new,courier,monospace;">: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the SDK </span><span style="color: rgb(204, 102, 0);">module </span><span
+ style="color: rgb(204, 102, 0);">version.</span> <span
+ style="font-weight: bold; color: rgb(255, 0, 0);">NEEDED</span> (the
+SDK version 0.1 to 0.6 are not used anymore)<span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getSmallComment()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function </span></small><small><span
+ style="font-family: courier new,courier,monospace;">getSmallComment</span></small><small><span
+ style="font-family: courier new,courier,monospace;">: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the small comment for describe the </span><span
+ style="color: rgb(204, 102, 0);">module</span><span
+ style="color: rgb(204, 102, 0);">.</span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+<br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">char *__stdcall
+getVersion()</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function
+getVersion: PChar; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Return the </span><span style="color: rgb(204, 102, 0);">module </span><span
+ style="color: rgb(204, 102, 0);">version.</span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+</span><br>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall
+initModule(char *folder)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure </span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><small><span
+ style="font-family: courier new,courier,monospace;">initModule</span></small><small><span
+ style="font-family: courier new,courier,monospace;">(folder:PChar);
+stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called when the module is activated.</span> <span
+ style="font-weight: bold; color: rgb(255, 0, 0);">NEEDED</span><span
+ style="color: rgb(204, 102, 0);"></span><br
+ style="color: rgb(204, 102, 0);">
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+folder: The folder where the </span><span
+ style="color: rgb(204, 102, 0);">module </span><span
+ style="color: rgb(204, 102, 0);">can store data.<br>
+</span><span style="font-weight: bold;"><br>
+</span><span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">boolean __stdcall
+isCompatible(char *system)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">function : PChar;
+stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called for know if the data file is supported by the
+module.</span><span style="color: rgb(204, 102, 0);"></span><span
+ style="color: rgb(204, 102, 0);"></span><span
+ style="font-weight: bold;"><br>
+</span><br>
+<span style="font-weight: bold;">C++:</span> <small><span
+ style="font-family: courier new,courier,monospace;">void __stdcall
+rename(INT32 language)</span></small><br>
+<span style="font-weight: bold;">Delphi:</span> <small><span
+ style="font-family: courier new,courier,monospace;">procedure
+rename(language: Integer)</span></small><small><span
+ style="font-family: courier new,courier,monospace;">; stdcall;</span></small><small><span
+ style="font-family: courier new,courier,monospace;"></span></small><br>
+<span style="color: rgb(204, 102, 0);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This function is called at startup of OfflineList and when the user
+change the selected language.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The language value:<br>
+<small>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; - 0 : English<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 1 :
+French<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 2 : Chinese (Simp)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+- 3 : Chinese (Trad)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 4 : German<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 5 :
+Dutch<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 6 : Italian<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+- 7 : Japanese<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 8 : Norwegian<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 9 :
+Polish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 10 : Portuguese (Brazil)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+- 11 : Spanish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 12 : Spanish (Mexico)<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; - 13
+: Swedish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 14 : Danish<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+- 15 : Czech<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+- 16 : ... .</small></span><br>
+<span style="color: rgb(204, 102, 0);"><br>
+</span>
+</body>
+</html>
