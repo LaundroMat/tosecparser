@@ -1,5 +1,5 @@
-from parsers.offlinelist_no_intro_xml_parser import NoIntroOfflineListParser
-from parsers.tosec_parser import TosecParser, TosecNamingConvention
+from .parsers.offlinelist_no_intro_xml_parser import NoIntroOfflineListParser
+from .parsers.tosec_parser import TosecParser, TosecNamingConvention
 
 def convert_dat_to_dicts(filename):
     print("Importing {}".format(filename))
@@ -18,19 +18,20 @@ def convert_dat_to_dicts(filename):
         print(tnc.__dict__)
 
 
-def import_xml_dat_file(filename):
+def import_no_intro_xml_dat_file(filename):
     p = NoIntroOfflineListParser(filename)
     p.parse()
     print('{} games parsed.'.format(len(p.games)))
+    return p
 
-import argparse
-
-parser = argparse.ArgumentParser(description="Load .dat files and convert to list of dicts")
-
-# only arg is filename
-parser.add_argument("filename", help="Database name")
-parser.add_argument("-p", help="parser")
-
-args = parser.parse_args()
-
-import_xml_dat_file(args.filename)
+# import argparse
+#
+# parser = argparse.ArgumentParser(description="Load .dat files and convert to list of dicts")
+#
+# # only arg is filename
+# parser.add_argument("filename", help="Database name")
+# parser.add_argument("-p", help="parser")
+#
+# args = parser.parse_args()
+#
+# import_no_intro_xml_dat_file(args.filename)

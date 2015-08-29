@@ -73,15 +73,16 @@ class NoIntroOfflineListParser(object):
     def __init__(self, filename):
         self.tree = etree.parse(filename)
         self.games = []
+        self.system = ''
 
     def parse(self):
-        system = self.tree.find('//system').text
+        self.system = self.tree.find('//system').text
         for game_element in self.tree.find('//games').iterchildren():
             game = dict()
             game['title'] = self.get_game_title(game_element)
             game['publisher'] = self.get_game_publisher(game_element)
             game['date'] = self.get_game_date(game_element)
-            game['languages'] = self.get_game_language(game_element)
+            game['languages'] = self.get_game_languages(game_element)
             game['locations'] = self.get_game_locations(game_element)
             self.games.append(game)
 
@@ -108,7 +109,7 @@ class NoIntroOfflineListParser(object):
             return date
         return None
 
-    def get_game_language(self, game_element):
+    def get_game_languages(self, game_element):
         offlinelist_language_codes = [n for n in self.languages.keys()]
         offlinelist_language_codes.sort()  # from lowest to highest
 
@@ -118,11 +119,11 @@ class NoIntroOfflineListParser(object):
             if game_language_codes > 0:
                 return self._find_languages(tuple(), offlinelist_language_codes, game_language_codes)
 
-        return None
+        return tuple()
 
     def get_game_locations(self, game_element):
         location_code = game_element.find('location').text
         if location_code == '-1':
-            return None
+            return tuple()
         else:
             return self.locations[location_code]
