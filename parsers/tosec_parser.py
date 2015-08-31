@@ -190,9 +190,6 @@ class TosecNamingConvention(object):
                 dump_flags = [d[1:-1] for d in re.split(r'(\[.*?\])', dump_part) if d]
                 self.set_dump_flags(dump_flags)
 
-            # Remove Rev PRG\d. from title
-            self.title = re.sub('Rev PRG\d*$', '', self.title)
-
     def set_flags(self, flags):
         current_flag_index = self.parts.index('publisher') + 1
         for flag in flags:
