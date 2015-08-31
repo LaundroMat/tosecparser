@@ -1,8 +1,17 @@
 import re
+import os
 from lxml import etree
 
 
-class NoIntroOfflineListParser(object):
+class XMLDatFileParser(object):
+    def __init__(self, filename):
+        print(os.path.basename(filename))
+        self.tree = etree.parse(filename)
+        self.games = []
+        self.system = ''
+
+
+class NoIntroOfflineListParser(XMLDatFileParser):
     """ Parses No-Intro XML .dat files into list of dicts
     """
 
@@ -69,11 +78,6 @@ class NoIntroOfflineListParser(object):
         elif sum_of_game_languages % code == 0:
             found += (self.languages[code],)
             return found
-
-    def __init__(self, filename):
-        self.tree = etree.parse(filename)
-        self.games = []
-        self.system = ''
 
     def parse(self):
         self.system = self.tree.find('//system').text

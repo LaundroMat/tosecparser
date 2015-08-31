@@ -2,93 +2,118 @@
 import re
 import logging
 from . import constants
+from tosecparser.parsers.offlinelist_no_intro_xml_parser import XMLDatFileParser
 
 LOGGER = logging.getLogger(__name__)
 
-def smart_split(string, sep=None):
-    sep_map = {
-        '(': ')',
-        '( ': ' )',
-        '<': '/>',
-        '{': '}',
-        '[': ']',
-    }
-    splits = []
-    word = ''
-    in_word = False
-    end_sep = sep_map.get(sep, sep)
-    for i in range(len(string)):
-        if sep:
-            if string[i:i + len(sep)] == sep and not in_word:
-                in_word = True
-            elif string[i - len(end_sep) + 1:i + 1] == end_sep and in_word:
-                in_word = False
-        char = string[i]
-        if char in (' ', '\t') and not in_word:
-            if word:
-                splits.append(word)
-                word = ''
-        else:
-            word += char
-    if word:
-        splits.append(word)
-    return splits
 
-
-class TosecParser(object):
-    def __init__(self, contents):
-        """contents is an list containing the lines of a Tosec dat file"""
-        self.contents = contents
-        self.headers = {}
-        self.games = []
-
-    def _iter_contents(self):
-        """Iterate over the dat's contents"""
-        for line in self.contents:
-            yield line
-
-    @staticmethod
-    def parse_line(line):
-        key, raw_value = line.split(' ', 1)
-        return key, raw_value.strip("\"")
-
-    def extract_rom(self, line):
-        line = line[1:-1]  # Strip parenthesis
-        parts = smart_split(line, sep='"')
-        game_dict = {}
-        for i in range(0, len(parts) - 1, 2):
-            key = parts[i]
-            value = parts[i + 1].strip('"')
-            game_dict[key] = value
-        return game_dict
-
-    def extract_line(self, line, item):
-        if line == ')':
-            return True
-        else:
-            parts = self.parse_line(line)
-            if parts[1] == '(':
-                return
-            if parts[0] == 'rom':
-                # FIXME there can be multiple roms in one entry
-                item['rom'] = self.extract_rom(parts[1])
-            else:
-                item[parts[0]] = parts[1]
+class TOSECParser(XMLDatFileParser):
+    def set_system(self):
+        self.system = self.tree.find('//header').find('name').text
 
     def parse(self):
-        headers_ok = False
-        game = {}
-        for line in self._iter_contents():
-            line = line.strip()
-            if not line:
-                continue
-            if not headers_ok:
-                headers_ok = self.extract_line(line, self.headers)
-            else:
-                game_ok = self.extract_line(line, game)
-                if game_ok:
-                    self.games.append(game)
-                    game = {}
+        self.set_system()
+        for game_element in self.tree.findall('game'):
+            game = dict()
+            game['details'] = TosecNamingConvention(game_element.get('name'))
+
+            game['tosec_name'] = game_element.get('name')
+            game['title'] = game['details'].title
+            game['publisher'] = game['details'].publisher
+            year = game['details'].date.split('-')[0] if game['details'].date else None
+            try:
+                year = int(year)
+            except ValueError:
+                year = None
+            game['year'] = year
+            game['countries'] = (c for c in game['details'].country.split('-')) if game['details'].country else None
+            game['languages'] = game['details'].language
+            self.games.append(game)
+
+# def smart_split(string, sep=None):
+#     sep_map = {
+#         '(': ')',
+#         '( ': ' )',
+#         '<': '/>',
+#         '{': '}',
+#         '[': ']',
+#     }
+#     splits = []
+#     word = ''
+#     in_word = False
+#     end_sep = sep_map.get(sep, sep)
+#     for i in range(len(string)):
+#         if sep:
+#             if string[i:i + len(sep)] == sep and not in_word:
+#                 in_word = True
+#             elif string[i - len(end_sep) + 1:i + 1] == end_sep and in_word:
+#                 in_word = False
+#         char = string[i]
+#         if char in (' ', '\t') and not in_word:
+#             if word:
+#                 splits.append(word)
+#                 word = ''
+#         else:
+#             word += char
+#     if word:
+#         splits.append(word)
+#     return splits
+#
+#
+# class TosecParser(object):
+#     def __init__(self, contents):
+#         """contents is an list containing the lines of a Tosec dat file"""
+#         self.contents = contents
+#         self.headers = {}
+#         self.games = []
+#
+#     def _iter_contents(self):
+#         """Iterate over the dat's contents"""
+#         for line in self.contents:
+#             yield line
+#
+#     @staticmethod
+#     def parse_line(line):
+#         key, raw_value = line.split(' ', 1)
+#         return key, raw_value.strip("\"")
+#
+#     def extract_rom(self, line):
+#         line = line[1:-1]  # Strip parenthesis
+#         parts = smart_split(line, sep='"')
+#         game_dict = {}
+#         for i in range(0, len(parts) - 1, 2):
+#             key = parts[i]
+#             value = parts[i + 1].strip('"')
+#             game_dict[key] = value
+#         return game_dict
+#
+#     def extract_line(self, line, item):
+#         if line == ')':
+#             return True
+#         else:
+#             parts = self.parse_line(line)
+#             if parts[1] == '(':
+#                 return
+#             if parts[0] == 'rom':
+#                 # FIXME there can be multiple roms in one entry
+#                 item['rom'] = self.extract_rom(parts[1])
+#             else:
+#                 item[parts[0]] = parts[1]
+#
+#     def parse(self):
+#         headers_ok = False
+#         game = {}
+#         for line in self._iter_contents():
+#             line = line.strip()
+#             if not line:
+#                 continue
+#             if not headers_ok:
+#                 headers_ok = self.extract_line(line, self.headers)
+#             else:
+#                 game_ok = self.extract_line(line, game)
+#                 if game_ok:
+#                     self.games.append(game)
+#                     game = {}
 
 
 class TosecNamingConvention(object):
@@ -160,8 +185,8 @@ class TosecNamingConvention(object):
 
             dump_match = re.search(r'\[.*\]', remainder)
             if dump_match:
-                dump_part = remainder[dump_match.start(), dump_match.end()]
-                dump_flags = [d for d in re.split(r'(\[.*?\])', dump_part) if d]
+                dump_part = remainder[dump_match.start(): dump_match.end()]
+                dump_flags = [d[1:-1] for d in re.split(r'(\[.*?\])', dump_part) if d]
                 self.set_dump_flags(dump_flags)
 
     def set_flags(self, flags):
@@ -327,3 +352,4 @@ class TosecNamingConvention(object):
         "Insert Character Disk".
         """
         self.media_label = value
+
