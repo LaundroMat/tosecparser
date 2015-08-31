@@ -2,6 +2,7 @@
 import re
 import logging
 from . import constants
+from core.helpers.string_ops import transform_tosec_game_title_to_readable
 from tosecparser.parsers.offlinelist_no_intro_xml_parser import XMLDatFileParser
 
 LOGGER = logging.getLogger(__name__)
@@ -18,7 +19,7 @@ class TOSECParser(XMLDatFileParser):
             game['details'] = TosecNamingConvention(game_element.get('name'))
 
             game['tosec_name'] = game_element.get('name')
-            game['title'] = game['details'].title
+            game['title'] = transform_tosec_game_title_to_readable(game['details'].title)
             game['publisher'] = game['details'].publisher
             year = game['details'].date.split('-')[0] if game['details'].date else None
             try:
@@ -188,6 +189,9 @@ class TosecNamingConvention(object):
                 dump_part = remainder[dump_match.start(): dump_match.end()]
                 dump_flags = [d[1:-1] for d in re.split(r'(\[.*?\])', dump_part) if d]
                 self.set_dump_flags(dump_flags)
+
+            # Remove Rev PRG\d. from title
+            self.title = re.sub('Rev PRG\d*$', '', self.title)
 
     def set_flags(self, flags):
         current_flag_index = self.parts.index('publisher') + 1
