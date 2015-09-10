@@ -19,17 +19,18 @@ class TOSECParser(XMLDatFileParser):
             game['details'] = TosecNamingConvention(game_element.get('name'))
 
             game['tosec_name'] = game_element.get('name')
-            game['title'] = transform_tosec_game_title_to_readable(game['details'].title)
-            game['publisher'] = game['details'].publisher
-            year = game['details'].date.split('-')[0] if game['details'].date else None
-            try:
-                year = int(year)
-            except ValueError:
-                year = None
-            game['year'] = year
-            game['countries'] = (c for c in game['details'].country.split('-')) if game['details'].country else None
-            game['languages'] = game['details'].language
-            self.games.append(game)
+            if game['details'].title:
+                game['title'] = transform_tosec_game_title_to_readable(game['details'].title)
+                game['publisher'] = game['details'].publisher
+                year = game['details'].date.split('-')[0] if game['details'].date else None
+                try:
+                    year = int(year)
+                except ValueError:
+                    year = None
+                game['year'] = year
+                game['countries'] = (c for c in game['details'].country.split('-')) if game['details'].country else None
+                game['languages'] = game['details'].language
+                self.games.append(game)
 
 # def smart_split(string, sep=None):
 #     sep_map = {
